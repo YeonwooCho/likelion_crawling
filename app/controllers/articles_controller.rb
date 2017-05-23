@@ -1,10 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    # @articles = Article.all
-    @articles = Article.search(params[:search])
-    @hacker_sum = Article.where("title like ?", "%해커%")
-    @hacker_sum_by_category = Article.where("category = ?", "hacker")
-    @genius_sum_by_category = Article.where("category = ?", "genius")
+    @articles = Article.all
   end
 
   def news_title
